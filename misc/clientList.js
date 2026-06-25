@@ -8,10 +8,21 @@ function masterClient(cID, cName, cEmail, cPhone) {
     }
 }
 
+// Made up people for testing purposes
 const clientList = [
     new masterClient(1, "John Doe", "john.doe@example.com", "123-456-7890"),
     new masterClient(2, "Jane Smith", "jane.smith@example.com", "098-765-4321"),
     new masterClient(3, "Bob Johnson", "bob.johnson@example.com", "555-555-5555")
 ];
 
-console.log(clientList[2].getInformation());
+clientList.addClient = function (cID, cName, cEmail, cPhone) {
+    const newClient = new masterClient(cID, cName, cEmail, cPhone);
+    this.push(newClient);
+}
+
+clientList.removeClient = function (cID) {
+    const index = this.findIndex(client => client.clientID === cID);
+    if (index !== -1) {
+        this.splice(index, 1);
+    }
+}
