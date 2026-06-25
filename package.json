@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "typescript": "^6.0.3"
+  }
+}
