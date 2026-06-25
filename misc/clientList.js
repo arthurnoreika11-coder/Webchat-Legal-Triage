@@ -3,6 +3,11 @@ function masterClient(cID, cName, cEmail, cPhone) {
     this.clientName = cName;
     this.clientEmail = cEmail;
     this.clientPhone = cPhone;
+    this.creationDate = new Date().getDate() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getFullYear() + " " + new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
+    this.lastUpdated = new Date().getDate() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getFullYear() + " " + new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
+    this.updateLastUpdated = function () {
+        this.lastUpdated = new Date().getDate() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getFullYear() + " " + new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
+    };
     this.getInformation = function () {
         return "Client ID: " + this.clientID + ", Name: " + this.clientName + ", Email: " + this.clientEmail + ", Phone: " + this.clientPhone;
     }
