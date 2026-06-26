@@ -4,7 +4,7 @@ function formatTimestamp(): string {
     return `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 }
 
-class MasterClient {
+class Client {
     clientID: number;
     clientName: string;
     clientEmail: string;
@@ -30,20 +30,20 @@ class MasterClient {
     }
 }
 
-interface ClientList extends Array<MasterClient> {
+interface ClientList extends Array<Client> {
     addClient(cID: number, cName: string, cEmail: string, cPhone: string): void;
     removeClient(cID: number): void;
 }
 
 // Made up people for testing purposes
 let clientList = [
-    new MasterClient(1, "John Doe", "john.doe@example.com", "123-456-7890"),
-    new MasterClient(2, "Jane Smith", "jane.smith@example.com", "098-765-4321"),
-    new MasterClient(3, "Bob Johnson", "bob.johnson@example.com", "555-555-5555")
+    new Client(1, "John Doe", "john.doe@example.com", "123-456-7890"),
+    new Client(2, "Jane Smith", "jane.smith@example.com", "098-765-4321"),
+    new Client(3, "Bob Johnson", "bob.johnson@example.com", "555-555-5555")
 ] as ClientList;
 
 clientList.addClient = function (cID: number, cName: string, cEmail: string, cPhone: string): void {
-    const newClient = new MasterClient(cID, cName, cEmail, cPhone);
+    const newClient = new Client(cID, cName, cEmail, cPhone);
     this.push(newClient);
 }
 
@@ -54,4 +54,4 @@ clientList.removeClient = function (cID: number): void {
     }
 }
 
-export { MasterClient, clientList };
+export { Client, clientList };

@@ -1,4 +1,4 @@
-class MasterMatter {
+class Matter {
     clientID: number;
     matterID: number;
     matterAreaOfLaw: string;
@@ -18,12 +18,12 @@ class MasterMatter {
     }
 }
 
-const matterList: MasterMatter[] = [
-    new MasterMatter(1, 101, "Family Law", "Open", "England"),
-    new MasterMatter(2, 102, "Criminal Law", "Closed", "Wales"),
-    new MasterMatter(3, 103, "Corporate Law", "In Progress", "Scotland"),
-    new MasterMatter(4, 104, "Intellectual Property Law", "Open", "Northern Ireland"),
-    new MasterMatter(5, 105, "Employment Law", "Closed", "Wales")
+const matterList: Matter[] = [
+    new Matter(1, 101, "Family Law", "Open", "England"),
+    new Matter(2, 102, "Criminal Law", "Closed", "Wales"),
+    new Matter(3, 103, "Corporate Law", "In Progress", "Scotland"),
+    new Matter(4, 104, "Intellectual Property Law", "Open", "Northern Ireland"),
+    new Matter(5, 105, "Employment Law", "Closed", "Wales")
 ];
 
-export { MasterMatter, matterList };
+export { Matter, matterList };
