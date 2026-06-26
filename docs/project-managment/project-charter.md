@@ -16,13 +16,13 @@ Below are the relevant stakeholders, detailed explaination can be found in [stak
 4. Reporting, Billing & Dashboards
 
 ## Success Criteria
-Client will have access to a client portal with all their matters (both closed and open), be able to raise new matters, update client information. Clients will be able to communicate with advisors via a webchat.
+### Client will have access to a client portal with all their matters (both closed and open), be able to raise new matters, update client information. Clients will be able to communicate with advisors via a webchat.
 ---
-Legal advisors(LAs) will be able to view pending communications and provide live respones in webchat. LAs will be able to modify matters, generate and send follow up emails to various person (each person with their own templates)
+### Legal advisors(LAs) will be able to view pending communications and provide live respones in webchat. LAs will be able to modify matters, generate and send follow up emails to various person (each person with their own templates)
 ---
-Superviors: access and manage matters and clients on a highlevel, produce reports, and have accesss to dashboards.
+### Superviors: access and manage matters and clients on a highlevel, produce reports, and have accesss to dashboards.
 ---
-Administrator: Full access general administrator.
+### Administrator: Full access general administrator.
 
 ## Constraints
 * No real client data to be used
