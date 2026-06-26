@@ -36,7 +36,7 @@ interface ClientList extends Array<MasterClient> {
 }
 
 // Made up people for testing purposes
-const clientList = [
+let clientList = [
     new MasterClient(1, "John Doe", "john.doe@example.com", "123-456-7890"),
     new MasterClient(2, "Jane Smith", "jane.smith@example.com", "098-765-4321"),
     new MasterClient(3, "Bob Johnson", "bob.johnson@example.com", "555-555-5555")
