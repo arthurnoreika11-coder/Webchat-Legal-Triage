@@ -1,8 +1,14 @@
-import Login from './pages/Login';
 import SideNav from './layouts/SideNav';
+import NewEnquiry from './pages/NewEnquiry';
+import './App.css';
 
 function App() {
-  return <SideNav />
+  return (
+    <div className="appLayout">
+      <SideNav />
+      <NewEnquiry />
+    </div>
+  );
 }
 
-export default App
+export default App;
