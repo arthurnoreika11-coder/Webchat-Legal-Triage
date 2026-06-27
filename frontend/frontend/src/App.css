@@ -163,10 +163,10 @@ body {
   width: min(100%, 24rem);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding: 2rem;
+  gap: 3rem;
+  padding: 4rem;
   border: 1px solid var(--deepAshGreen);
-  border-radius: 8px;
+  border-radius: 100px;
   background: var(--offWhiteGreen);
   box-shadow: 0 1rem 2.5rem rgb(114 172 127 / 18%);
 }
@@ -211,14 +211,22 @@ body {
   width: 100%;
   padding: 0.85rem 1rem;
   border: 0;
-  border-radius: 6px;
+  border-radius: 999999px;
   background: var(--darkGreen);
-  color: var(--blackGreen);
+  color: white;
   font: inherit;
   font-weight: 700;
   cursor: pointer;
 }
 
+.formSubmit:hover {
+  background-color: var(--lightAshGreen);
+  color: var(--darkGreen);
+  transition: 
+    background-colour 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
 .toggle-btn{
   border-radius: 9999999px;
 }

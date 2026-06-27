@@ -44,7 +44,7 @@ export default function Navbar(): React.JSX.Element {
             return (
               <li key={index} className='nav-item'>
                 <span className='item-icon'>
-                  <Icon size={22} />
+                  <Icon size={44} />
                 </span>
                 {isExpanded && <span className='item-text'>{item.title}</span>}
               </li>
