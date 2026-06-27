@@ -23,19 +23,14 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 export default function Navbar(): React.JSX.Element {
-  const [isExpanded, setIsExpanded] = useState<boolean>(true);
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   return (
-    <div className={`sidebar ${isExpanded ? 'expanded' : 'collapsed'}`}>
-      <button
-        className='toggle-btn'
-        onClick={() => setIsExpanded(!isExpanded)}
-        aria-label='Toggle Navbar'
-        
-      >
-        {isExpanded ? '◀' : '▶'}
-      </button>
-
+    <div
+      className={`sidebar ${isExpanded ? 'expanded' : 'collapsed'}`}
+      onMouseEnter={() => setIsExpanded(true)}
+      onMouseLeave={() => setIsExpanded(false)}
+    >
       <div className='navbar-menu'>
         <ul>
           {NAV_ITEMS.map((item: NavItem, index: number) => {
