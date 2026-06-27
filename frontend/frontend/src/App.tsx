@@ -1,4 +1,4 @@
-import SideNav from './layouts/SideNav';
+import SideNav from './layouts/ClientSideNav';
 import NewEnquiry from './pages/NewEnquiry';
 import './App.css';
 
