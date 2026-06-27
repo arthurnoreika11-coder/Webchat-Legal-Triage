@@ -40,9 +40,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
-  padding: 2rem;
+  padding: 3rem;
   border: 1px solid var(--deepAshGreen);
-  border-radius: 8px;
+  border-radius: 100px;
   background: var(--offWhiteGreen);
   box-shadow: 0 1rem 2.5rem rgb(114 172 127 / 18%);
 }
@@ -231,6 +231,8 @@ body {
 
 .formInput {
   width: 100%;
+  max-width: 100%;
+  min-height: 50px;
   box-sizing: border-box;
   padding: 0.8rem 0.9rem;
   border: 1px solid var(--deepAshGreen);
@@ -243,6 +245,10 @@ body {
 .formInput:focus {
   outline: 3px solid rgb(114 172 127 / 25%);
   border-color: var(--deepAshGreen);
+}
+
+.formRadio {
+  accent-color: var(--darkGreen);
 }
 
 .formSubmit {
