@@ -1,5 +1,5 @@
-import SideNav from './layouts/ClientSideNav';
-import NewEnquiry from './pages/NewEnquiry';
+import SideNav from './layouts/client/ClientSideNav';
+import NewEnquiry from './pages/clients/NewEnquiry';
 import './App.css';
 
 function App() {
