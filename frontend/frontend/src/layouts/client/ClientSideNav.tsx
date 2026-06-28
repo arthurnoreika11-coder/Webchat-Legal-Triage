@@ -6,7 +6,7 @@ import { PiArchive} from "react-icons/pi";
 import { PiUserList } from "react-icons/pi";
 import { IoAccessibilityOutline } from "react-icons/io5";
 import { IoSettingsOutline } from "react-icons/io5";
-import '../App.css'
+import '../../App.css'
 
 interface NavItem {
   title: string;
