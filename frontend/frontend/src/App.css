@@ -5,6 +5,7 @@
   --lightAshGreen: #d3e3db;
   --offWhiteGreen: #eff5f2;
   --whiteGreen: #fcfffa89;
+  --baseWhite: #ffffff;
 
   --fontSize: 1rem;
   --lineSpacing: 1.5;
@@ -48,7 +49,7 @@ body {
   padding: 3rem;
   border: 1px solid var(--deepAshGreen);
   border-radius: 100px;
-  background: var(--offWhiteGreen);
+  background: var(--baseWhite);
   box-shadow: 0 1rem 2.5rem rgb(114 172 127 / 18%);
 }
 
@@ -213,7 +214,7 @@ body {
   padding: 4rem;
   border: 1px solid var(--deepAshGreen);
   border-radius: 100px;
-  background: white;
+  background: var(--baseWhite);
   box-shadow: 0 1rem 2.5rem rgb(114 172 127 / 18%);
 }
 
@@ -260,7 +261,7 @@ body {
   border: 0;
   border-radius: 999999px;
   background: var(--darkGreen);
-  color: white;
+  color: var(--baseWhite);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
@@ -325,7 +326,7 @@ body {
   padding: 2rem;
   border: 1px solid var(--deepAshGreen);
   border-radius: 24px;
-  background: white;
+  background: var(--baseWhite);
   box-shadow: 0 1rem 2.5rem rgb(36 67 51 / 10%);
 }
 
