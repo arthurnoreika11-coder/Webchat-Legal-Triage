@@ -1,7 +1,4 @@
-import { useMemo, useState } from 'react';
 import '../../App.css';
-
-type EnquiryFilter = 'all' | 'open' | 'urgent';
 
 class Matter {
   clientID: number;
@@ -12,7 +9,6 @@ class Matter {
   jurisdiction: string;
   preview: string;
   lastUpdated: string;
-  isUrgent: boolean;
 
   constructor(
     cID: number,
@@ -23,7 +19,6 @@ class Matter {
     mJurisdiction: string,
     preview: string,
     lastUpdated: string,
-    isUrgent = false,
   ) {
     this.clientID = cID;
     this.matterID = mID;
@@ -33,7 +28,6 @@ class Matter {
     this.jurisdiction = mJurisdiction;
     this.preview = preview;
     this.lastUpdated = lastUpdated;
-    this.isUrgent = isUrgent;
   }
 
   getFullInfo(): Record<string, string | number | boolean> {
@@ -45,7 +39,6 @@ class Matter {
       jurisdiction: this.jurisdiction,
       preview: this.preview,
       lastUpdated: this.lastUpdated,
-      isUrgent: this.isUrgent,
     };
   }
 
@@ -64,7 +57,6 @@ const matterList: Matter[] = [
     'England',
     'I was dismissed without warning and need advice on what happens next.',
     'Today, 09:42',
-    true,
   ),
   new Matter(
     2,
@@ -99,22 +91,8 @@ const matterList: Matter[] = [
 ];
 
 export default function OpenEnquiries() {
-  const [activeFilter, setActiveFilter] = useState<EnquiryFilter>('all');
-
   const openMatterCount = matterList.filter((matter) => matter.getStatus()).length;
-  const urgentMatterCount = matterList.filter((matter) => matter.isUrgent).length;
-
-  const filteredMatters = useMemo(() => {
-    if (activeFilter === 'open') {
-      return matterList.filter((matter) => matter.getStatus());
-    }
-
-    if (activeFilter === 'urgent') {
-      return matterList.filter((matter) => matter.isUrgent);
-    }
-
-    return matterList;
-  }, [activeFilter]);
+  const filteredMatters = matterList;
 
   return (
     <main className="inboxPage">
@@ -125,40 +103,16 @@ export default function OpenEnquiries() {
               Open Enquiries
             </h1>
             <p className="inboxSubtitle">
-              {openMatterCount} open matters, {urgentMatterCount} marked urgent
+              {openMatterCount} current open enquiry{openMatterCount === 1 ? '' : 'ies'}
             </p>
           </div>
         </header>
 
-        <div className="inboxToolbar" aria-label="Filter enquiries">
-          <button
-            className={`toolbarButton ${activeFilter === 'all' ? 'active' : ''}`}
-            type="button"
-            onClick={() => setActiveFilter('all')}
-          >
-            All
-          </button>
-          <button
-            className={`toolbarButton ${activeFilter === 'open' ? 'active' : ''}`}
-            type="button"
-            onClick={() => setActiveFilter('open')}
-          >
-            Open
-          </button>
-          <button
-            className={`toolbarButton ${activeFilter === 'urgent' ? 'active' : ''}`}
-            type="button"
-            onClick={() => setActiveFilter('urgent')}
-          >
-            Urgent
-          </button>
-        </div>
-
         <ul className="enquiryList" aria-label="Open enquiry inbox">
           {filteredMatters.map((matter) => (
             <li
-              className={`enquiryRow ${matter.isUrgent ? 'unread' : ''}`}
               key={matter.matterID}
+              className="enquiryRow"
             >
 
               <div className="enquiryContent">
