@@ -278,13 +278,52 @@ body {
 /* Combined styles from both branches: preserve both inbox and matter layouts */
 
 .matterContainer {
+  flex: 1;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: var(--whiteGreen);
+  background: linear-gradient(135deg, var(--offWhiteGreen), var(--whiteGreen));
+}
+
+.matterCard {
+  width: min(100%, 42rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 2rem;
+  border: 1px solid var(--deepAshGreen);
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 1rem 2.5rem rgb(36 67 51 / 10%);
+}
+
+.matterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.matterBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: var(--lightAshGreen);
+  color: var(--blackGreen);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.matterStatus {
+  color: var(--darkGreen);
+  font-size: 0.95rem;
+  font-weight: 800;
 }
 
 .inboxPage {
@@ -457,30 +496,92 @@ body {
     width: fit-content;
   }
 }
-=======
 .matterTitle {
-  margin: 0 0 0.25rem;
+  margin: 0;
   color: var(--blackGreen);
-  font-size: 1.75rem;
-  line-height: var(--lineHeight);
-  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.2;
 }
 
-.matterEnquiryType {
-  margin: 0 0 0.25rem;
+.matterMeta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  padding: 0.5rem 0 0.2rem;
+}
+
+.matterMetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.matterMetaLabel {
+  color: rgb(36 67 51 / 70%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.matterMetaValue {
+  margin: 0;
   color: var(--blackGreen);
-  font-size: var(--fontSize);
-  line-height: var(--lineHeight);
-  text-align: center;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.matterMessageBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1rem;
+  border-radius: 16px;
+  background: var(--offWhiteGreen);
+}
+
+.matterSectionTitle {
+  margin: 0;
+  color: var(--blackGreen);
+  font-size: 1rem;
 }
 
 .matterMessage {
-  margin: 0 0 0.25rem;
-  color: var(--blackGreen);
-  font-size: var(--fontSize);
-  line-height: var(--lineHeight);
-  text-align: center;
-  font-style: italic;
-  background-color: white;
+  margin: 0;
+  color: rgb(36 67 51 / 78%);
+  font-size: 0.98rem;
+  line-height: 1.6;
 }
->>>>>>> a05ae18a0adf4bedd6f0296e8ee11eeae577bd92
+
+.matterButton {
+  align-self: flex-start;
+  padding: 0.85rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--darkGreen);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.matterButton:hover {
+  background: var(--blackGreen);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .matterContainer {
+    padding: 1rem;
+  }
+
+  .matterCard {
+    padding: 1.3rem;
+  }
+
+  .matterHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
