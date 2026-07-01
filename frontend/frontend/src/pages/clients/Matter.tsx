@@ -49,7 +49,7 @@ export default function Matter() {
                 <div className="matterActions">
                     <button className="matterButton">Chat History</button>
                     <button className="matterButton">
-                        {matterData.wasClosed ? 'Restart Chat' : 'Open Live Chat'}
+                        {matterData.wasClosed ? 'Restart Chat' : 'Open Chat'}
                     </button>
                 </div>
 
