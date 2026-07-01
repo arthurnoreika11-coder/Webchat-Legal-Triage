@@ -1,5 +1,5 @@
-import SideNav from './layouts/client/ClientSideNav';
 import './App.css';
+import SideNav from './layouts/client/ClientSideNav';
 import Matter from './pages/clients/Matter';
 import StaffSideNav from './layouts/staff/StaffSideNav';
 import ClientSideNav from './layouts/client/ClientSideNav';
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="appLayout">
       <StaffSideNav />
-      <NewEnquiry />
+      <Matter />
       </div>
   );
 }

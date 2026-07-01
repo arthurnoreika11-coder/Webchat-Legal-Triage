@@ -11,7 +11,9 @@ export default function Matter() {
 
     return (
         <main className="matterContainer">
+
             <section className="matterCard">
+
                 <div className="matterHeader">
                     <span className="matterBadge">{matterData.enquiryType}</span>
                     <span className="matterStatus">{matterData.status}</span>
@@ -35,8 +37,13 @@ export default function Matter() {
                     <p className="matterMessage">{matterData.message}</p>
                 </div>
 
-                <button className="matterButton">Open Live Chat</button>
+                <div className="matterActions">
+                    <button className="matterButton">Chat History</button>
+                    <button className="matterButton">Open Live Chat</button>
+                </div>
+
             </section>
+            
         </main>
     );
 }

@@ -11,9 +11,11 @@ Below are the relevant stakeholders, detailed explaination can be found in [stak
 
 ## Milestones
 1. Login & Authentication
-2. Matter management & Live chat
-3. AI intergration
-4. Reporting, Billing & Dashboards
+2. Client and Matter management
+3. Dashboard and statistics 
+4. Live chat
+5. AI intergration
+6. Reporting & Billing
 
 ## Success Criteria
 Client will have access to a client portal with all their matters (both closed and open), be able to raise new matters, update client information. Clients will be able to communicate with advisors via a webchat.
