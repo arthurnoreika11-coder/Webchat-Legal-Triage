@@ -9,11 +9,13 @@ const Login = () => {
         <div className="formField">
           <label className="formLabel" htmlFor="email">Email</label>
           <input className="formInput" type="email" id="email" name="email" autoComplete="email" />
+          <span className='formUnderline'></span>
         </div>
 
         <div className="formField">
           <label className="formLabel" htmlFor="password">Password</label>
           <input className="formInput" type="password" id="password" name="password" autoComplete="current-password" />
+          <span className='formUnderline'></span>
         </div>
 
         <button className="formSubmit" type="submit">Login</button>

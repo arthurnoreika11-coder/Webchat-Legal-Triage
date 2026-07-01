@@ -1,12 +1,12 @@
 import SideNav from './layouts/client/ClientSideNav';
-import NewEnquiry from './pages/clients/NewEnquiry';
+import OpenEnquiries from './pages/clients/OpenEnquiries';
+import Login from './layouts/client/Client_login';
 import './App.css';
 
 function App() {
   return (
     <div className="appLayout">
-      <SideNav />
-      <NewEnquiry />
+      <Login></Login>
     </div>
   );
 }
