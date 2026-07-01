@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import type { IconType } from 'react-icons';
 import { LuMessageCirclePlus } from "react-icons/lu";
 import { VscFileSubmodule } from "react-icons/vsc";
-import { PiArchive} from "react-icons/pi";
-import { PiUserList } from "react-icons/pi";
-import { IoAccessibilityOutline } from "react-icons/io5";
-import { IoSettingsOutline } from "react-icons/io5";
+import { PiArchive, PiUserList} from "react-icons/pi";
+import { IoAccessibilityOutline, IoSettingsOutline } from "react-icons/io5";
 import '../../App.css'
 
 interface NavItem {
