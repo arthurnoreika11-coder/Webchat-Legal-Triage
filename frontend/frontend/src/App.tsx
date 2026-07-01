@@ -1,16 +1,15 @@
+import { useState } from 'react';
 import './App.css';
-import Matter from './pages/clients/Matter';
 import ClientSideNav from './layouts/client/ClientSideNav';
-import StaffLogin from './layouts/staff/Staff_login';
-import StaffSideNav from './layouts/staff/StaffSideNav';
 import OpenEnquiries from './pages/clients/OpenEnquiries';
 
-
 function App() {
+  const [matterFilter, setMatterFilter] = useState<'open' | 'closed'>('open');
+
   return (
     <div className="appLayout">
       <ClientSideNav />
-      <OpenEnquiries />
+      <OpenEnquiries matterFilter={matterFilter} onMatterFilterChange={setMatterFilter} />
     </div>
   );
 }

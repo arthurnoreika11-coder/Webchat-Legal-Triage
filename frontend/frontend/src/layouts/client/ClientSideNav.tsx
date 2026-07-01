@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { IconType } from 'react-icons';
 import { LuMessageCirclePlus } from "react-icons/lu";
 import { VscFileSubmodule } from "react-icons/vsc";
-import { PiArchive, PiUserList} from "react-icons/pi";
+import { PiUserList } from "react-icons/pi";
 import { IoAccessibilityOutline, IoSettingsOutline } from "react-icons/io5";
 import '../../App.css'
 
@@ -13,8 +13,7 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { title: 'New Enquiry', icon: LuMessageCirclePlus },
-  { title: 'Open Enquiries', icon: VscFileSubmodule },
-  { title: 'Closed Enquiries', icon: PiArchive },
+  { title: 'Enquiries', icon: VscFileSubmodule },
   { title: 'Your Information', icon: PiUserList },
   { title: 'Accessibility', icon: IoAccessibilityOutline },
   { title: 'Settings', icon: IoSettingsOutline }

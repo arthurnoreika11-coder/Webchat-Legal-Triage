@@ -88,23 +88,56 @@ const matterList: Matter[] = [
     'I need to understand my options for agreeing regular contact.',
     '21 Jun, 14:03',
   ),
+  new Matter(
+    5,
+    5,
+    'Previous tenancy complaint',
+    'Housing',
+    false,
+    'England',
+    'The matter was resolved after a negotiation with the landlord.',
+    '14 Jun, 10:05',
+  ),
 ];
 
-export default function OpenEnquiries() {
-  const openMatterCount = matterList.filter((matter) => matter.getStatus()).length;
-  const filteredMatters = matterList;
+interface OpenEnquiriesProps {
+  matterFilter: 'open' | 'closed';
+  onMatterFilterChange: (value: 'open' | 'closed') => void;
+}
+
+export default function OpenEnquiries({ matterFilter, onMatterFilterChange }: OpenEnquiriesProps) {
+  const filteredMatters = matterList.filter((matter) => matter.getStatus() === (matterFilter === 'open'));
+  const visibleMatterCount = filteredMatters.length;
+  const title = matterFilter === 'open' ? 'Open Enquiries' : 'Closed Enquiries';
+  const subtitle = matterFilter === 'open'
+    ? `${visibleMatterCount} current open enquiry${visibleMatterCount === 1 ? '' : 'ies'}`
+    : `${visibleMatterCount} closed enquiry${visibleMatterCount === 1 ? '' : 'ies'}`;
 
   return (
     <main className="inboxPage">
       <section className="inboxShell" aria-labelledby="open-enquiries-title">
         <header className="inboxHeader">
-          <div>
+          <div className="inboxHeaderContent">
             <h1 className="inboxTitle" id="open-enquiries-title">
-              Open Enquiries
+              {title}
             </h1>
             <p className="inboxSubtitle">
-              {openMatterCount} current open enquiry{openMatterCount === 1 ? '' : 'ies'}
+              {subtitle}
             </p>
+          </div>
+
+          <div className="inboxHeaderActions" role="group" aria-label="Filter matters by status">
+            <span className="matterFilterLabel">Open</span>
+            <button
+              type="button"
+              className={`matterFilterSwitch ${matterFilter === 'closed' ? 'is-closed' : ''}`}
+              onClick={() => onMatterFilterChange(matterFilter === 'open' ? 'closed' : 'open')}
+              aria-pressed={matterFilter === 'closed'}
+              aria-label={`Show ${matterFilter === 'open' ? 'closed' : 'open'} matters`}
+            >
+              <span className="matterFilterThumb" />
+            </button>
+            <span className="matterFilterValue">Closed</span>
           </div>
         </header>
 
