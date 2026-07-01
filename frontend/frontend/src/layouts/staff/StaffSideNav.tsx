@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import type { IconType } from 'react-icons';
-import { LuMessageCirclePlus } from "react-icons/lu";
-import { VscFileSubmodule } from "react-icons/vsc";
-import { PiArchive} from "react-icons/pi";
-import { PiUserList } from "react-icons/pi";
+import { IoFolderOpenOutline } from "react-icons/io5";
+import { MdOutlineDashboard } from "react-icons/md";
+import { GoPerson } from "react-icons/go";
+import { VscFiles } from "react-icons/vsc";
+import { MdOutlineManageAccounts } from "react-icons/md";
 import { IoAccessibilityOutline } from "react-icons/io5";
 import { IoSettingsOutline } from "react-icons/io5";
 import '../../App.css'
@@ -14,10 +15,11 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { title: 'New Enquiry', icon: LuMessageCirclePlus },
-  { title: 'Open Enquires', icon: VscFileSubmodule },
-  { title: 'Closed Enquires', icon: PiArchive },
-  { title: 'Client Information', icon: PiUserList },
+  { title: 'Dashboard', icon: MdOutlineDashboard },
+  { title: 'Assigned Matters', icon: IoFolderOpenOutline },
+  { title: 'Clients', icon: GoPerson },
+  { title: 'Matters', icon: VscFiles },
+  { title: 'Manage Users', icon: MdOutlineManageAccounts },
   { title: 'Accessibility', icon: IoAccessibilityOutline },
   { title: 'Settings', icon: IoSettingsOutline }
 ];
