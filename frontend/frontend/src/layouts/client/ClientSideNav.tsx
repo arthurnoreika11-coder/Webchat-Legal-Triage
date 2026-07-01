@@ -13,9 +13,9 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { title: 'New Enquiry', icon: LuMessageCirclePlus },
-  { title: 'Open Enquires', icon: VscFileSubmodule },
-  { title: 'Closed Enquires', icon: PiArchive },
-  { title: 'Client Information', icon: PiUserList },
+  { title: 'Open Enquiries', icon: VscFileSubmodule },
+  { title: 'Closed Enquiries', icon: PiArchive },
+  { title: 'Your Information', icon: PiUserList },
   { title: 'Accessibility', icon: IoAccessibilityOutline },
   { title: 'Settings', icon: IoSettingsOutline }
 ];
