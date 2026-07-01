@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import type { IconType } from 'react-icons';
-import { IoFolderOpenOutline } from "react-icons/io5";
-import { MdOutlineDashboard } from "react-icons/md";
+import { IoFolderOpenOutline, IoAccessibilityOutline, IoSettingsOutline } from "react-icons/io5";
+import { MdOutlineDashboard, MdOutlineManageAccounts } from "react-icons/md";
 import { GoPerson } from "react-icons/go";
 import { VscFiles } from "react-icons/vsc";
-import { MdOutlineManageAccounts } from "react-icons/md";
-import { IoAccessibilityOutline } from "react-icons/io5";
-import { IoSettingsOutline } from "react-icons/io5";
 import '../../App.css'
 
 interface NavItem {

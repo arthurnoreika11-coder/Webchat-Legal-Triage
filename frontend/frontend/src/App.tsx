@@ -9,7 +9,7 @@ import StaffLogin from './layouts/staff/Staff_login';
 function App() {
   return (
     <div className="appLayout">
-      <ClientSideNav />
+      <StaffSideNav />
       <Matter />
       </div>
   );
