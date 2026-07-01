@@ -5,6 +5,11 @@
   --lightAshGreen: #d3e3db;
   --offWhiteGreen: #eff5f2;
   --whiteGreen: #fcfffa89;
+
+  --fontSize: 1rem;
+  --lineSpacing: 1.5;
+  --lineHeight: calc(var(--fontSize) * var(--lineSpacing));
+  
 }
 
 body {
@@ -213,7 +218,7 @@ body {
   margin: 0 0 0.25rem;
   color: var(--blackGreen);
   font-size: 1.75rem;
-  line-height: 1.2;
+  line-height: var(--lineHeight);
   text-align: center;
 }
 
@@ -273,4 +278,38 @@ body {
 }
 .toggle-btn{
   border-radius: 9999999px;
+}
+
+.matterContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--whiteGreen);
+}
+
+.matterTitle {
+  margin: 0 0 0.25rem;
+  color: var(--blackGreen);
+  font-size: 1.75rem;
+  line-height: var(--lineHeight);
+  text-align: center;
+}
+
+.matterEnquiryType {
+  margin: 0 0 0.25rem;
+  color: var(--blackGreen);
+  font-size: var(--fontSize);
+  line-height: var(--lineHeight);
+  text-align: center;
+}
+
+.matterMessage {
+  margin: 0 0 0.25rem;
+  color: var(--blackGreen);
+  font-size: var(--fontSize);
+  line-height: var(--lineHeight);
+  text-align: center;
 }

@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 export default function Matter() {
     const [matterData] = useState ({
-        subject: String,
-        enquiryType: String,
-        message: String
+        subject: '',
+        enquiryType: '',
+        message: ''
     });
 
 return (
