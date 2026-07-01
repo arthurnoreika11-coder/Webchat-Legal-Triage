@@ -196,8 +196,10 @@ body {
 .loginContainer {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   padding: 2rem;
   background: var(--whiteGreen);
   margin: auto;
@@ -268,10 +270,38 @@ body {
   background-color: var(--lightAshGreen);
   color: var(--darkGreen);
   transition: 
-    background-colour 0.3s ease,
+    background-color 0.3s ease,
     color 0.3s ease,
     transform 0.3s ease;
 }
+
+.ssoButton {
+  width: min(100%, 24rem);
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--darkGreen);
+  border-radius: 999999px;
+  background: transparent;
+  color: var(--darkGreen);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ssoButton:hover {
+  background-color: var(--lightAshGreen);
+  color: var(--blackGreen);
+  transform: translateY(-1px);
+}
+
+.ssoButton:focus-visible {
+  outline: 3px solid rgb(114 172 127 / 28%);
+  outline-offset: 2px;
+}
+
 .toggle-btn{
   border-radius: 9999999px;
 }

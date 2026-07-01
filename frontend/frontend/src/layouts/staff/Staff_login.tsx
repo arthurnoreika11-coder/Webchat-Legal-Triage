@@ -1,6 +1,6 @@
 import '../../App.css'
 
-const Login = () => {
+const StaffLogin = () => {
   return (
     <div className="loginContainer">
       <form className="loginForm">
@@ -18,10 +18,9 @@ const Login = () => {
 
         <button className="formSubmit" type="submit">Login</button>
       </form>
-
-      <div className='SSO'>{/* Add SSO*/}</div>
+      <button className="ssoButton">Login with SSO</button>
     </div>
   )
 }
 
-export default Login
+export default StaffLogin;

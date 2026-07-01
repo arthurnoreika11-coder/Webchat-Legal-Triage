@@ -22,7 +22,7 @@ const NAV_ITEMS: NavItem[] = [
   { title: 'Settings', icon: IoSettingsOutline }
 ];
 
-export default function Navbar(): React.JSX.Element {
+export default function ClientSideNav(): React.JSX.Element {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   return (
